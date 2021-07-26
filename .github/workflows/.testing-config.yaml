@@ -3,12 +3,18 @@ name: Django Tests
 on:
   push:
     branches:
-      - master
-      - test
+      - 'feature/TS-**'
+      - 'bug/TS-**'
+      - 'fix/TS-**'
+      - 'task/TS-**'
+
   
   pull_request:
     branches:
       - master
+      - development
+      - staging
+      
 
 # on:
 #   schedule:
