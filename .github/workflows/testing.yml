@@ -14,7 +14,7 @@ on:
 #     - cron:  '*/15 * * * *'
 
 jobs:
-  build:
+  pre-commit:
 
     runs-on: ubuntu-latest
 
