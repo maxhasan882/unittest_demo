@@ -29,17 +29,19 @@ jobs:
     - uses: actions/checkout@v2
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
-    - name: Taking Envs
-      env:
-        DATABASES: ${{ DATABASES }}
-        DEBUG: ${{ DEBUG }}
       with:
         python-version: 3.7
     - name: Install dependencies
+      env:
+        DATABASES: ${{ DATABASES }}
+        DEBUG: ${{ DEBUG }}
       run: |
         python -m pip install --upgrade pip 
         pip install -r requirements.txt
     - name: Django Testing
+      env:
+        DATABASES: ${{ DATABASES }}
+        DEBUG: ${{ DEBUG }}
       run: |
         python3 manage.py test
         
