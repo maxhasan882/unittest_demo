@@ -26,7 +26,7 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-DEBUG = os.environ('DEBUG', False)
+DEBUG = os.getenv('DEBUG', False)
 
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
 SECRET_KEY = 'aksjdkasd'
@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'unittest_teq.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if os.environ('DATABASES'):
-    DATABASES = json.loads(os.environ('DATABASES'))
+if os.getenv('DATABASES'):
+    DATABASES = json.loads(os.getenv('DATABASES'))
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
