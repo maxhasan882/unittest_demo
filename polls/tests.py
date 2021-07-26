@@ -4,7 +4,7 @@ from django.test import TestCase
 class DemoTests(TestCase):
     def setUp(self):
         self.actual = 1
-        self.expected = 2
+        self.expected = 1
     def test_actual_expected(self):
         self.assertEqual(self.expected, self.actual)
         self.assertEqual(self.expected, 2)
