@@ -7,3 +7,4 @@ class DemoTests(TestCase):
         self.expected = 2
     def test_actual_expected(self):
         self.assertEqual(self.expected, self.actual)
+        self.assertEqual(self.expected, 2)
