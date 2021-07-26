@@ -76,6 +76,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'unittest_teq.wsgi.application'
+print("Database ----------->>>>", os.getenv('DEBUG'))
 print("Database ----------->>>>", os.getenv('DATABASES'))
 
 # Database
