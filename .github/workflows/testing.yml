@@ -40,3 +40,6 @@ jobs:
     - name: Django Testing
       run: |
         python3 manage.py test
+    - name: Commit Roleback 
+      run: |
+        
